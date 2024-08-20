@@ -1,4 +1,3 @@
-
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./index.css");
     eleventyConfig.addPassthroughCopy("./index.js");
@@ -6,10 +5,10 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./assets");
 
     return {
-        // dir: {
-        //     // output: "docs",
-        //     // input: "content",
-        //     // includes: '../_includes'
-        // }
+        dir: {
+            output: "blog",
+            input: "content",
+            includes: "../_includes"
+        }
     }
 }

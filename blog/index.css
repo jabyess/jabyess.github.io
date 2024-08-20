@@ -1,0 +1,87 @@
+@property --bg-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #EEF0F2;
+}
+
+@property --accent-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #FFC100;
+}
+
+@property --primary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #FF8200;
+}
+
+@property --trim-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #FF0000;
+}
+
+@property --text-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0A0903;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src:
+    url("fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Oswald";
+  src:
+    url("fonts/Oswald-VariableFont_wght.ttf") format("truetype");
+}
+
+html {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+body {
+  font-family: "Montserrat";
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 97vh;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+a:visited {
+  color: var(--text-color);
+}
+
+h1 {
+  font-weight: 700;
+  text-align: center;
+}
+
+.links {
+  display: block;
+  text-align: center;
+}
+
+.links span,
+a {
+  padding: 10px;
+}
+
+.links span:hover,
+a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
