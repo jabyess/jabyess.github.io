@@ -1,12 +1,3 @@
----
-layout: bloglayout
-title: Welcome to my blog
-date: 2024-08-20
-tags: 
-    - intro
-    - otherintro
----
-
 
 # Heading
 
