@@ -38,3 +38,4 @@ date: foo
     - posts by date
     - archive of posts, etc
 - fix fonts breaking on individual posts
+- https://countapi.xyz/ maybe use this for analytics
