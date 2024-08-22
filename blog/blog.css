@@ -3,3 +3,13 @@ body {
     font-family: 'Montserrat';
     font-size: 18px;
 }
+
+header {
+    border: 1px solid var(--accent-color);
+    padding: 10px 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;   
+}

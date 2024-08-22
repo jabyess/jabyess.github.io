@@ -1,0 +1,14 @@
+---
+layout: layouts/base
+---
+{% set postsCount = collections.posts | length %}
+
+<header>
+    <div>{{ postsCount }} posts so far</div>
+</header>
+
+<main>
+    <div>
+        {{content | safe}}
+    </div>
+</main>
