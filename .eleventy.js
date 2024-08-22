@@ -1,3 +1,5 @@
+require('dotenv').config()
+
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./index.css");
     eleventyConfig.addPassthroughCopy("./content/blog.css");
@@ -6,6 +8,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy("./assets");
 
     return {
+        debug: process.env.DEBUG || false,
         dir: {
             output: "blog",
             input: "content",
