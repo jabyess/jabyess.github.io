@@ -37,3 +37,4 @@ date: foo
 - build templates? so i can show things like
     - posts by date
     - archive of posts, etc
+- fix fonts breaking on individual posts
