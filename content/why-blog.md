@@ -41,12 +41,14 @@ Especially the technical & leadership people out there. Their writing is so good
 - [Julia Evans](https://jvns.ca/)
 - [randsinrepose](randsinrepose.com)
 
-Even the non-technical non-leadership writers have lots of good things to say.
+Even the non-technical non-leadership writers have lots of good things to say. 
 
 - [WaitButWhy](https://waitbutwhy.com/)
+- [Achewood](https://achewood.com/)
 - [Alec Karakatsanis](https://substack.com/@equalityalec)
 
+There are way more people than this who write good things on the internet. I'll surely add more to this list over time.
 
+### I'm unemployed
 
-
-### i'm unemployed
+If you're hiring a software engineering manager, [email me](mailto:jimmy@skelios.com)

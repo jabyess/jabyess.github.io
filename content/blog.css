@@ -12,4 +12,6 @@ header {
 main {
     display: flex;
     justify-content: center;   
+    max-width: 650px;
+    line-height: 1.2;
 }
