@@ -7,12 +7,15 @@
         <title>{{ title }}</title>
         <script data-goatcounter="https://skelios.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
         <style>
-        {% include '../styles.njk' %}
-        </style>
+            {% include '../styles.njk' %}</style>
     </head>
     <body>
+        <header>
+            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate("MM-dd-yyyy") }}</time>
+        </header>
         <main>
-            {{content | safe}}
+            <h1 class="title">{{ title }}</h1>
+            {{ content | safe }}
         </main>
     </body>
 </html>
