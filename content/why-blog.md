@@ -40,7 +40,7 @@ Especially the technical & leadership people out there. Their writing is so good
 
 - [Dan luu](http://danluu.com/about/)
 - [Julia Evans](https://jvns.ca/)
-- [randsinrepose](randsinrepose.com)
+- [randsinrepose](https://randsinrepose.com/)
 - [patio11](https://www.kalzumeus.com/)
 
 Even the non-technical non-leadership writers have lots of good things to say. 
