@@ -38,4 +38,4 @@ date: foo
     - posts by date
     - archive of posts, etc
 - fix fonts breaking on individual posts
-- https://countapi.xyz/ maybe use this for analytics
+- can i figure out a way to show git diffs of revisions for posts? like have a button that shows a previous version compared to the newest version? that might be neat.
