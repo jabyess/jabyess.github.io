@@ -2,11 +2,8 @@
 layout: layouts/base
 ---
 
-{% include '../postmeta.njk' %}
-
-<p>post layout</p>
-
 <main>
+    {% include '../postmeta.njk' %}
     <h1 class="title">{{ title }}</h1>
     {{content | safe }}
 </main>
