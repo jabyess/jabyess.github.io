@@ -4,9 +4,35 @@ body {
     font-size: 18px;
 }
 
-header {
+body header {
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.postcount {
     border: 1px solid var(--accent-color);
+    border-radius: 5px;
     padding: 10px 20px;
+}
+
+header ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+header ul li:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
 }
 
 main {
@@ -14,3 +40,18 @@ main {
     line-height: 1.2;
     margin: auto;
 }
+
+.post-meta {
+    border-bottom: 1px solid var(--accent-color)
+}
+
+.post-meta time {
+    display: inline-block;
+    padding: 0px 10px 0px 0px;
+}
+
+.post-meta p {
+    display: inline-block;
+    padding: 0px 10px;
+}
+

@@ -55,9 +55,35 @@ body {
     font-size: 18px;
 }
 
-header {
+body header {
+    border-bottom: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.postcount {
     border: 1px solid var(--accent-color);
+    border-radius: 5px;
     padding: 10px 20px;
+}
+
+header ul li {
+    display: inline-block;
+    list-style: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+header ul li:hover {
+    color: var(--text-color);
+    text-decoration: underline;
+    text-decoration-color: var(--accent-color);
 }
 
 main {
@@ -65,22 +91,37 @@ main {
     line-height: 1.2;
     margin: auto;
 }
+
+.post-meta {
+    border-bottom: 1px solid var(--accent-color)
+}
+
+.post-meta time {
+    display: inline-block;
+    padding: 0px 10px 0px 0px;
+}
+
+.post-meta p {
+    display: inline-block;
+    padding: 0px 10px;
+}
+
 </style>
     </head>
     <body>
         <header>
-            <time datetime="2024-09-10">09-10-2024</time>
+            <ul>
+                <li><a href="/">skelios</a></li>
+                <li><a href="/blog">index</a></li>
+            </ul>
         </header>
         <main>
-            <h1 class="title">skelios blog index</h1>
             
 
-<header>
-    <div>2 posts so far</div>
-</header>
 
 <div>
-    <p>welcome to skelios' blog. it's a website that is probably going to be permanently under construction.</p>
+    <h1>Welcome</h1>
+<p>welcome to skelios' blog. it's a website that is probably going to be permanently under construction.</p>
 <p>you can start with my first post: <a href="./why-blog">why blog</a></p>
 
 </div>
