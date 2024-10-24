@@ -1,11 +1,8 @@
 ---
 layout: layouts/base
 ---
-{% set postsCount = collections.posts | length %}
 
-<header>
-    <div>{{ postsCount }} posts so far</div>
-</header>
+{% set postsCount = collections.posts | length %}
 
 <div>
     {{content | safe}}

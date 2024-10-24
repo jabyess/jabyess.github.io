@@ -11,10 +11,12 @@
     </head>
     <body>
         <header>
-            <time datetime="{{ page.date | htmlDateString }}">{{ page.date | readableDate("MM-dd-yyyy") }}</time>
+            <ul>
+                <li><a href="/">skelios</a></li>
+                <li><a href="/blog">index</a></li>
+            </ul>
         </header>
         <main>
-            <h1 class="title">{{ title }}</h1>
             {{ content | safe }}
         </main>
     </body>
