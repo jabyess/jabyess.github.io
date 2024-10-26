@@ -2,12 +2,7 @@ import { count } from "@wordpress/wordcount";
 
 export default async function (eleventyConfig) {
   // copy all of these files into the output dir, so they get deployed to GH pages
-  // eleventyConfig.addPassthroughCopy("./index.css");
-  // eleventyConfig.addPassthroughCopy("./shared.css");
   eleventyConfig.addPassthroughCopy("./content/*.css");
-  // eleventyConfig.addPassthroughCopy("./index.js");
-  // eleventyConfig.addPassthroughCopy("./fonts");
-  // eleventyConfig.addPassthroughCopy("./assets");
 
   eleventyConfig.addAsyncFilter("htmlDateString", async (dateObj) => {
     // use sv-SE locale to comply with iso 8601 date format yyyy-mm-dd
