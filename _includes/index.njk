@@ -8,7 +8,7 @@ layout: layouts/base
     <h2>All posts</h2>
     <ul>
     {%- for post in collections.posts -%}
-        <li><a href="blog/{{post.url}}">{{ post.data.title }}</a></li>
+        <li><a href="/blog{{post.url}}">{{ post.data.title }}</a></li>
     {%- endfor -%}
     </ul>
 </div>
