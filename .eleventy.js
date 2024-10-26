@@ -1,39 +1,41 @@
-require('dotenv').config()
+import { count } from "@wordpress/wordcount";
 
-const readingTime = require('reading-time')
-const { DateTime } = require("luxon");
+export default async function (eleventyConfig) {
+  // copy all of these files into the output dir, so they get deployed to GH pages
+  // eleventyConfig.addPassthroughCopy("./index.css");
+  // eleventyConfig.addPassthroughCopy("./shared.css");
+  // eleventyConfig.addPassthroughCopy("./content/blog.css");
+  // eleventyConfig.addPassthroughCopy("./index.js");
+  // eleventyConfig.addPassthroughCopy("./fonts");
+  // eleventyConfig.addPassthroughCopy("./assets");
 
-module.exports = function(eleventyConfig) {
-    // copy all of these files into the output dir, so they get deployed to GH pages
-    eleventyConfig.addPassthroughCopy("./index.css");
-    eleventyConfig.addPassthroughCopy("./shared.css");
-    eleventyConfig.addPassthroughCopy("./content/blog.css");
-    eleventyConfig.addPassthroughCopy("./index.js");
-    eleventyConfig.addPassthroughCopy("./fonts");
-    eleventyConfig.addPassthroughCopy("./assets");
+  eleventyConfig.addAsyncFilter("htmlDateString", async (dateObj) => {
+    // use sv-SE locale to comply with iso 8601 date format yyyy-mm-dd
+    return Intl.DateTimeFormat("sv-SE").format(dateObj);
+  });
 
-    eleventyConfig.addFilter('htmlDateString', (dateObj) => {
-		// dateObj input: https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-date-string
-		return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat('yyyy-LL-dd');
-	});
+  eleventyConfig.addAsyncFilter("readableDate", async (dateObj) => {
+    // use en-US format and configuration for pretty dates visible to user
+    const options = {
+      month: "long",
+      year: "numeric",
+      day: "numeric",
+    };
+    return Intl.DateTimeFormat("en-US", options).format(dateObj);
+  });
 
-    eleventyConfig.addFilter("readableDate", (dateObj, format, zone) => {
-		// Formatting tokens for Luxon: https://moment.github.io/luxon/#/formatting?id=table-of-tokens
-		return DateTime.fromJSDate(dateObj, { zone: zone || "utc" }).toFormat(format || "dd LLLL yyyy");
-	});
+  eleventyConfig.addFilter("wordcount", (content) => {
+    const words = count(content, "words");
 
-    eleventyConfig.addFilter("wordcount", (content) => {
-        const stats = readingTime(content);
-        
-        return `${stats.words} words`
-    })
+    return `${words} words`;
+  });
 
-    return {
-        debug: process.env.DEBUG || false,
-        dir: {
-            output: "blog",
-            input: "content",
-            includes: "../_includes"
-        }
-    }
+  return {
+    debug: process.env.DEBUG || false,
+    dir: {
+      output: ".",
+      input: "content",
+      includes: "../_includes",
+    },
+  };
 }

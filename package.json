@@ -2,6 +2,7 @@
   "name": "jabyess.github.io",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -18,12 +19,7 @@
   },
   "homepage": "https://github.com/jabyess/jabyess.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "dotenv": "^16.4.5",
-    "luxon": "^3.5.0"
-  },
-  "dependencies": {
-    "@photogabble/eleventy-plugin-word-stats": "^1.0.1",
-    "reading-time": "^1.5.0"
+    "@11ty/eleventy": "^3.0.0",
+    "@wordpress/wordcount": "^4.10.0"
   }
 }
