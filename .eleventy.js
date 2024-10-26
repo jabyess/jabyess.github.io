@@ -4,7 +4,7 @@ export default async function (eleventyConfig) {
   // copy all of these files into the output dir, so they get deployed to GH pages
   // eleventyConfig.addPassthroughCopy("./index.css");
   // eleventyConfig.addPassthroughCopy("./shared.css");
-  // eleventyConfig.addPassthroughCopy("./content/blog.css");
+  eleventyConfig.addPassthroughCopy("./content/*.css");
   // eleventyConfig.addPassthroughCopy("./index.js");
   // eleventyConfig.addPassthroughCopy("./fonts");
   // eleventyConfig.addPassthroughCopy("./assets");

@@ -6,16 +6,16 @@
         <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
         <title>{{ title }}</title>
         <script data-goatcounter="https://skelios.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-        <style>
-            {% include '../styles.njk' %}</style>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="blog.css">
     </head>
     <body>
-        <header>
+        <nav>
             <ul>
                 <li><a href="/">skelios</a></li>
             </ul>
-        </header>
-        <div class="wrapper">
+        </nav>
+        <div class="content-wrapper">
             {{ content | safe }}
         </div>
     </body>

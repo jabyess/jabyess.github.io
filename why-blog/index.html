@@ -6,124 +6,16 @@
         <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
         <title>Why write a blog?</title>
         <script data-goatcounter="https://skelios.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-        <style>
-            @property --bg-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #EEF0F2;
-}
-
-@property --accent-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #FFC100;
-}
-
-@property --primary-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #FF8200;
-}
-
-@property --trim-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #FF0000;
-}
-
-@property --text-color {
-  syntax: "<color>";
-  inherits: false;
-  initial-value: #0A0903;
-}
-
-@font-face {
-  font-family: "Montserrat";
-  src:
-    url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
-}
-
-html {
-  color: var(--text-color);
-}
-
-body {
-  font-family: "Montserrat";
-}
-body { 
-    font-family: 'Montserrat';
-    font-size: 18px;
-}
-
-body header {
-    border-bottom: 1px solid var(--primary-color);
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.postcount {
-    border: 1px solid var(--accent-color);
-    border-radius: 5px;
-    padding: 10px 20px;
-}
-
-header ul li {
-    display: inline-block;
-    list-style: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-header a {
-    color: var(--text-color);
-    text-decoration: none;
-}
-
-header ul li:hover {
-    color: var(--text-color);
-    text-decoration: underline;
-    text-decoration-color: var(--accent-color);
-}
-
-main {
-    max-width: 650px;
-    line-height: 1.2;
-    margin: auto;
-}
-
-.post-meta {
-    border-bottom: 1px solid var(--accent-color)
-}
-
-.post-meta time {
-    display: inline-block;
-    padding: 0px 10px 0px 0px;
-}
-
-.post-meta p {
-    display: inline-block;
-    padding: 0px 10px;
-}
-
-.wrapper {
-    
-
-}
-
-.archive ul {
-    list-style: none;
-    padding-left: 0;
-    
-}</style>
+        <link rel="stylesheet" href="normalize.css">
+        <link rel="stylesheet" href="blog.css">
     </head>
     <body>
-        <header>
+        <nav>
             <ul>
                 <li><a href="/">skelios</a></li>
             </ul>
-        </header>
-        <div class="wrapper">
+        </nav>
+        <div class="content-wrapper">
             
 <main>
     <div class="post-meta">

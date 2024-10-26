@@ -1,62 +1,122 @@
-
-body { 
-    font-family: 'Montserrat';
-    font-size: 18px;
+@property --bg-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #eef0f2;
 }
 
-body header {
-    border-bottom: 1px solid var(--primary-color);
-    margin-bottom: 10px;
-    border-radius: 5px;
+@property --accent-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #ffc100;
+}
+
+@property --primary-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #ff8200;
+}
+
+@property --trim-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #ff0000;
+}
+
+@property --text-color {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0a0903;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+html {
+  color: var(--text-color);
+}
+
+body {
+  font-family: "Montserrat";
+  font-size: 18px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
+}
+
+a:visited {
+  color: var(--primary-color);
+  text-decoration-color: var(--text-color);
+}
+
+ul {
+  list-style-type: none;
+}
+
+body nav {
+  border-bottom: 1px solid var(--primary-color);
+  margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 .postcount {
-    border: 1px solid var(--accent-color);
-    border-radius: 5px;
-    padding: 10px 20px;
+  border: 1px solid var(--accent-color);
+  border-radius: 5px;
+  padding: 10px 20px;
 }
 
 header ul li {
-    display: inline-block;
-    list-style: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
+  display: inline-block;
+  list-style: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
-header a {
-    color: var(--text-color);
-    text-decoration: none;
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+nav a:visited {
+  color: var(--text-color);
 }
 
 header ul li:hover {
-    color: var(--text-color);
-    text-decoration: underline;
-    text-decoration-color: var(--accent-color);
+  color: var(--text-color);
+  text-decoration: underline;
+  text-decoration-color: var(--accent-color);
 }
 
 main {
-    max-width: 650px;
-    line-height: 1.2;
-    margin: auto;
+  max-width: 650px;
+  line-height: 1.2;
+  margin: auto;
 }
 
 .post-meta {
-    border-bottom: 1px solid var(--accent-color)
+  border-bottom: 1px solid var(--accent-color);
 }
 
 .post-meta time {
-    display: inline-block;
-    padding: 0px 10px 0px 0px;
+  display: inline-block;
+  padding: 0px 10px 0px 0px;
 }
 
 .post-meta p {
-    display: inline-block;
-    padding: 0px 10px;
+  display: inline-block;
+  padding: 0px 10px;
+}
+
+.content-wrapper {
+    padding: 1rem;
 }
 
 .archive ul {
-    list-style: none;
-    padding-left: 0;
-    
+  list-style: none;
+  padding-left: 0;
 }

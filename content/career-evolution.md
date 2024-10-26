@@ -1,6 +1,6 @@
 ---
 tags: career 
-title: Having lots of jobs eventually evolves into a career
+title: An evolution of a career
 ---
 
 I've had many jobs in my lifetime, which has taken me on a very non-traditional career path. Based on my past experience, I bet I will have many more varieties of jobs. Software Engineering and managing probably won't be what I do for the rest of my life, but I don't know that for sure.

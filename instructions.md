@@ -7,6 +7,8 @@ github pages follows the directory structure of this repo. so navigate in the br
 
 each post (a post is a .md file in `./content`) gets outputted into its own subfolder in the root dir
 
+edit your css files inside of `./content`, they will be copied to the root dir
+
 ## add a new post
 - create a .md file in `./content`
 - add frontmatter
