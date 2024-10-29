@@ -29,6 +29,6 @@ date: foo
 - build templates? so i can show things like
     - posts by date
     - archive of posts, etc
-- fix fonts breaking on individual posts but not index
 - can i figure out a way to show git diffs of revisions for posts? like have a button that shows a previous version compared to the newest version? that might be neat.
 - get footnotes working properly. they work in obsidian but not html. https://stackoverflow.com/questions/66964/how-do-i-create-a-link-to-a-footnote-in-html
+- add about me section or something to index page.
