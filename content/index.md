@@ -2,6 +2,7 @@
 layout: index
 title: skelios blog index
 tags: index home
+eleventyExcludeFromCollections: ['posts']
 ---
 
 # Welcome 

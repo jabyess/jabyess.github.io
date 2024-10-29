@@ -33,9 +33,6 @@
   src: url("/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
 }
 
-html {
-  color: var(--text-color);
-}
 
 body {
   font-family: "Montserrat";
@@ -123,4 +120,18 @@ main {
 
 main ul {
   list-style-type: disc;
+}
+
+
+
+
+/* 
+-------- dont write new css below this line ----------
+trying to fix FOUC
+*/
+
+html {
+  opacity: 1;
+  visibility: visible;
+  color: var(--text-color);
 }
