@@ -1,6 +1,30 @@
 import { count } from "@wordpress/wordcount";
+import { feedPlugin } from '@11ty/eleventy-plugin-rss';
+import footnotes from 'eleventy-plugin-footnotes'
 
 export default async function (eleventyConfig) {
+
+  // atom feed config
+  eleventyConfig.addPlugin(feedPlugin, {
+		type: "atom", // "atom, "rss", "json"
+		outputPath: "/feed.xml",
+		collection: {
+			name: "posts", // iterate over `collections.posts`
+			limit: 10,     // 0 means no limit
+		},
+		metadata: {
+			language: "en",
+			title: "skelios' blog",
+			subtitle: "A blog about humans, careers, maybe some technology",
+			base: "https://skelios.com/",
+			author: {
+				name: "Jimmy Byess",
+				email: "jimmy@skelios.com", // Optional
+			}
+		}
+	});
+
+
   // copy all of these files into the output dir, so they get deployed to GH pages
   eleventyConfig.addPassthroughCopy("./content/*.css");
 
