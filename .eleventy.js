@@ -2,7 +2,22 @@ import { count } from "@wordpress/wordcount";
 import { feedPlugin } from '@11ty/eleventy-plugin-rss';
 import footnotes from 'eleventy-plugin-footnotes'
 
+// const testFootnotePlugin = (eleventyConfig) => {
+//   // console.log(eleventyConfig)
+
+//   eleventyConfig.addTransform("footnotes", (content) => {
+//     // console.log(content)
+
+//     const footnotes = content.matchAll(/\[\^\d\]/g)
+//     console.log([...footnotes])
+//   })
+
+  
+// }
+
 export default async function (eleventyConfig) {
+
+  // eleventyConfig.addPlugin(testFootnotePlugin)
 
   // atom feed config
   eleventyConfig.addPlugin(feedPlugin, {
