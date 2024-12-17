@@ -124,6 +124,7 @@ main {
     grid-template-columns: [nav] 1fr [content] 3fr [right] 1fr;
 }
 
+
 .archive ul {
   list-style: none;
   padding-left: 0;
@@ -157,6 +158,14 @@ main ul {
   grid-area:content;
 }
 
+@media (max-width: 600px) {
+  .content-wrapper {
+    /* grid-template-columns: 1fr; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
 
 /* 
 -------- dont write new css below this line ----------
