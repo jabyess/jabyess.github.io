@@ -132,6 +132,7 @@ main {
 
 .archive ul li {
   line-height: 1.2;
+  margin-bottom: 8px;
 }
 
 .archive h2 {
@@ -156,6 +157,11 @@ main ul {
 
 .post-main {
   grid-area:content;
+}
+
+blockquote {
+  border-left: 1px solid var(--accent-color);
+  padding-left: 10px;
 }
 
 @media (max-width: 600px) {
