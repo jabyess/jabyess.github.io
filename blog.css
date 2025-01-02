@@ -62,6 +62,11 @@ body nav {
 
 nav ul {
   padding-left: 1rem;
+  display: flex;
+}
+
+nav ul li {
+  padding: 0 10px;
 }
 
 .postcount {
