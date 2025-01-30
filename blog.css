@@ -175,6 +175,12 @@ blockquote {
     display: flex;
     flex-direction: column;
   }
+  .archive {
+    order: 2;
+  }
+  .index-main {
+    order: 1;
+  }
   
 }
 
