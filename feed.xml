@@ -4,12 +4,21 @@
   <subtitle>A blog about humans, careers, maybe some technology</subtitle>
   <link href="https://skelios.com/feed.xml" rel="self" />
   <link href="https://skelios.com/" />
-  <updated>2026-01-22T17:26:07Z</updated>
+  <updated>2026-03-17T21:44:43Z</updated>
   <id>https://skelios.com/</id>
   <author>
     <name>Jimmy Byess</name>
     <email>jimmy@skelios.com</email>
   </author>
+  <entry>
+    <title></title>
+    <link href="https://skelios.com/projects/" />
+    <updated>2026-03-17T21:44:43Z</updated>
+    <id>https://skelios.com/projects/</id>
+    <content type="html">&lt;p&gt;I made an &lt;a href=&quot;https://skelios.com/literacy-project&quot;&gt;MC Escher inspired tessellation&lt;/a&gt; playground for a school project. This was my first project using any kind of AI coding (specifically Claude Sonnet 4.5) and I am reasonably impressed with its abilities.&lt;/p&gt;
+&lt;p&gt;Years ago I made a web-based clone of an android &lt;a href=&quot;https://skelios.com/7x7/&quot;&gt;7x7 grid puzzle game&lt;/a&gt;. It&#39;s fun, but its janky and unfinished. Github &lt;a href=&quot;https://skelios.com/projects/github.com/jabyess/7x7&quot;&gt;link here&lt;/a&gt;&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Decisionmaking, or lack thereof</title>
     <link href="https://skelios.com/decision-making/" />
