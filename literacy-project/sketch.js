@@ -1,9 +1,11 @@
 let hexagons = [];
 let mandalas = [];
 let triangles = [];
+let squares = [];
 let mandalaSpinning = false;
 let mandalaRotation = 0;
 const sideLength = 100;
+const sqS = 100; // square side length
 const triS = 140; // triangle side length
 const triH = (triS * Math.sqrt(3)) / 2; // triangle height
 const hexSpacingX = sideLength * 3; // horizontal spacing between hexagon centers
@@ -34,6 +36,14 @@ function setup() {
   add10TriButton.mousePressed(() => { for (let i = 0; i < 10; i++) addTriangle(); });
   add10TriButton.parent("button-container");
 
+  let addSquareButton = createButton("Add Square");
+  addSquareButton.mousePressed(addSquare);
+  addSquareButton.parent("button-container");
+
+  let add10SquareButton = createButton("Add 10 Squares");
+  add10SquareButton.mousePressed(() => { for (let i = 0; i < 10; i++) addSquare(); });
+  add10SquareButton.parent("button-container");
+
   let addMandalaButton = createButton("Add Mandala");
   addMandalaButton.mousePressed(addMandala);
   addMandalaButton.parent("button-container");
@@ -53,6 +63,7 @@ function setup() {
   clearButton.mousePressed(() => {
     hexagons = [];
     triangles = [];
+    squares = [];
     mandalas = [];
     mandalaSpinning = false;
     spinButton.html("Spin Mandalas");
@@ -73,6 +84,9 @@ function draw() {
     drawHexagon({ centerX, centerY, fillColor });
   });
 
+  // Draw all squares
+  squares.forEach((sq) => drawSquare(sq));
+
   // Draw all triangles
   triangles.forEach((tri) => drawTriangle(tri));
 
@@ -80,6 +94,33 @@ function draw() {
   mandalas.forEach((mandala) => {
     drawMandala(mandala.x, mandala.y);
   });
+}
+
+function getSquareCols() {
+  if (windowWidth > 2000) return 20;
+  if (windowWidth > 1600) return 16;
+  if (windowWidth > 1200) return 12;
+  if (windowWidth > 800) return 8;
+  if (windowWidth > 600) return 6;
+  return 4;
+}
+
+function addSquare() {
+  const nCols = getSquareCols();
+  const row = Math.floor(squares.length / nCols);
+  const col = squares.length % nCols;
+  const x = col * sqS + sqS / 2;
+  const y = row * sqS + sqS / 2;
+  const fillColor = (row + col) % 2 === 0 ? grape : rose;
+  squares.push({ x, y, fillColor });
+}
+
+function drawSquare({ x, y, fillColor }) {
+  rectMode(CENTER);
+  stroke(0);
+  strokeWeight(2);
+  fill(fillColor);
+  rect(x, y, sqS, sqS);
 }
 
 function getTriCols() {
